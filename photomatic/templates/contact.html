@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <style>
+        html, body {
+        min-height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+        }
+        h1 {
+        margin: 0 0 20px;
+        font-weight: 400;
+        color: #1c87c9;
+        }
+        p {
+        margin: 0 0 5px;
+        }
+        .main-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        }
+        form {
+        padding: 25px;
+        margin: 25px;
+        box-shadow: 0 2px 5px #f5f5f5; 
+        background: #f5f5f5; 
+        }
+        .fas {
+        margin: 25px 10px 0;
+        font-size: 72px;
+        color: #fff;
+        }
+        .fa-envelope {
+        transform: rotate(-20deg);
+        }
+        .fa-at , .fa-mail-bulk{
+        transform: rotate(10deg);
+        }
+        input, textarea {
+        width: calc(100% - 18px);
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #1c87c9;
+        outline: none;
+        }
+        input::placeholder {
+        color: #666;
+        }
+        button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        }
+        button:hover {
+        background: #0a0c0d;
+        }    
+        @media (min-width: 568px) {
+        .main-block {
+        flex-direction: row;
+        }
+        .left-part, form {
+        width: 50%;
+        }
+        .fa-envelope {
+        margin-top: 0;
+        margin-left: 20%;
+        }
+        .fa-at {
+        margin-top: -10%;
+        margin-left: 65%;
+        }
+        .fa-mail-bulk {
+        margin-top: 2%;
+        margin-left: 28%;
+        }
+       
+        
+        }
+.submit-s {
+    text-align: center;
+}
+
+
+.submit-b{
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 670px;
+    cursor: pointer;
+}
+
+
+.submit-b:hover {
+    box-shadow: 0 3px 6px silver;
+    background-color:black;
+    color: yellow;
+}
+        
+      </style>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GURUDEV</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='layout/styles/ind.css')}}">
+    
+        <link rel="stylesheet" href="{{url_for('static',filename='layout/styles/nav.css')}}">
+        
+    </head>
+    <body id="top" background="{{url_for('static',filename='images/about8.png')}}">
+
+        <header>
+            <a href="{{url_for('home')}}"><img  class="logo" src="../static/images/about9.png"  alt="" width="200px" height="50px"></a>
+
+                
+                <nav >
+                    <ul class="container1">
+                        <li><a href="{{url_for('home')}}"><button> Home</button></a></li>
+                        <li><a href="{{url_for('about')}}"><button> About</button></a></li>
+                        <li><a href="{{url_for('contact')}}"><button>Contact</button></a></li>
+                    </ul>
+                </nav>
+                
+             </div>
+        </header>
+        <main>
+<section class="con">
+            <center>
+
+            <form action="{{ url_for('review') }}" method="post" >
+            
+             
+              <h1>Contact Us</h1>
+              <div class="info">
+                <input class="fname" type="text" name="name" id="name" placeholder="Full name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="text" name="phone" id="phone" placeholder="Phone number" required>
+             
+              </div>
+              <p>Message</p>
+              <div class="info">
+                <textarea id="message" name="message"rows="4"></textarea>
+              </div>
+              <div class="submit-s">
+              <a href="{{url_for('home')}}"><input class="submit-b" type="submit" value="submit" width="500px"></a>
+              </div>
+            </form>
+            </center>
+          </section>
+        </main>
+        <footer>
+          <p class="ftr"><span>PH NO:</span> 8606096298 </p>
+          <p class="frr"><span>EMAIL: </span>gasc.ac.gmail.com</p>
+      </footer>
+    </body>
+</html>

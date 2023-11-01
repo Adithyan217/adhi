@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='layout/styles/redetail.css')}}">
+    
+    
+    <body background="{{url_for('static',filename='images/about8.png')}}" >
+    <title>Document</title>
+</head>
+<body>
+  <main class="table">
+   <section class="table_header">
+     <h1>User Review</h1>
+   </section>
+   <section class="table_body">
+   <table>
+     <thead>
+   <tr >
+     <th>Name</th> 
+     <th>Email</th>
+     <th>Ph Number</th>
+     <th>Message</th>
+     <th>Edit</th>
+    
+    
+   </tr>
+     </thead>
+     <tbody>
+     {% for raw in data %}
+     <tr>
+      <form action="{{url_for('reviewdelete')}}" method="post">
+      <td>{{ raw[0] }}</td>
+      <td ><input style="border: none; background: transparent;" type="text" value="{{ raw[1] }}" id="email" name="email"></td>
+      <td>{{ raw[2] }}</td>
+      <td>{{ raw[3] }}</td>
+      <td><input type="submit" value="DELETE"></td>
+  
+      </form> 
+     </tr>
+     {% endfor %}
+   </table>
+    
+        
+     </table>
+ </body>
+ </html>

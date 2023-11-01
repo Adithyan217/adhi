@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static',filename='layout/styles/logs.css')}}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>login</title>
+    </head>
+    <body id="top" background="{{url_for('static',filename='images/about8.png')}}" width="1920px" height="1080px">
+        
+    
+       
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header"></br></br>
+                
+         
+            
+                <form action="{{ url_for('login') }}" method="post"></br>
+
+                  <div class="right-section">
+                        <h4>LOGIN</h4>
+                        <form action="">
+                           
+                            <div class="input-group">
+                                <input type="username" id="username" name="username" required />
+                                <label for="username">Username</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" id="password" name="password" required/>
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="submit-section">
+                                <input type="submit" class="submit-button"/>
+                            </div>
+                </form>
+            
+            <p class="bottom">dont have an account <a href="{{url_for('register')}}">sign up here</a></p>
+          </div>
+
+
+        </div>
+        
+        {{msg}}
+    </body>
+</html>

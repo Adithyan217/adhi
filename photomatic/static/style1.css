@@ -1,0 +1,28 @@
+body 
+{
+  font-family:Arial; 
+  background: -webkit-linear-gradient(to right, #155799, #159957); 
+  background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke;
+}
+
+form{
+    width:25rem;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.headingsContainer{
+    text-align: center;
+  }
+  
+  .headingsContainer p{
+    color: gray;
+  }
+  .mainContainer{
+    padding: 16px;
+  }
